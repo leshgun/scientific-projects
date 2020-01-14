@@ -1,2 +1,2 @@
-# some_projects
+# Some projects
 Some projects for my University
