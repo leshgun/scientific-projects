@@ -1,3 +1,7 @@
+'''
+    Chinese Remainder Theorem
+'''
+
 p = 5
 q = 7
 y = 10
