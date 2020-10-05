@@ -1,3 +1,7 @@
+'''
+    Cryptosystem RSA with fast exponentiation and Chinese Remainder Theorem
+'''
+
 def CT(r, n):
     N = 1
     for i in n: N *= int(i)
