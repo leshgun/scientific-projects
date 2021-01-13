@@ -1,2 +1,2 @@
-# Some projects
+# Scientific projects
 Some projects for my University
