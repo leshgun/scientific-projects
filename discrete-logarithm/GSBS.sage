@@ -24,5 +24,5 @@ if __name__ == '__main__':
 	f = GF(p, 'alpha'); print('Base Field:', f)
 	a = f(3); print(f'a: {a}, order = {a.multiplicative_order()}')
 	b = 57; print('b:', b)
-	print('log_a(b):', log(f(b), a))		# = 100	
-	print('GSBS(a, b):', GSBS(a=a, b=b))	# = 100
+	print('log_a(b):', log(f(b), a))			# = 100	
+	print('GSBS(a, b):', GSBS(a=a, b=b))		# = 100
