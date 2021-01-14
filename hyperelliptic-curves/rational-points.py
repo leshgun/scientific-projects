@@ -27,6 +27,6 @@ def getRatPoints(p, f, h=0):
 
 if __name__ == '__main__':
     p = 7
-    f = (1, 5, 0, 6, 1, 3)
-    h = (1, 0)
+    f = (1, 5, 0, 6, 1, 3)      # = x^5 + 5x^4 + 6x^2 + x + 3
+    h = (1, 0)                  # not required
     pprint(getRatPoints(p, f, h), compact=True)
