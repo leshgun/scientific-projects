@@ -27,10 +27,10 @@ def getQuadFormsFromDiscr(D):
     while b <= r:
         m = (b**2 - D)/4
         a = 1
-        while a <= int(m):
+        while a <= int(sqrt(m)):
             if not m%a:
                 c = m/a
-                if (b <= a) and (a <= c) and (gcd([a, b, c]) == 1):
+                if (b <= a) and (gcd([a, b, c]) == 1):
                     if (b == a) or (c == a): arr += [(a, b, c)]
                     else: arr += [(a, b, c), (a, -b, c)]
             a += 1
@@ -59,6 +59,9 @@ def getQuadFormsFromDiscr2(D):
 
 if __name__ == '__main__':
     D = -1000
+#     for i in range(30):
+#         s = getQuadFormsFromDiscr2(-i)
+#         if s: print(f'-- ({-i}) -- h = {len(s)}: {s}')
     print('D = -12:', getQuadFormsCount(-12))
     print('Forms:', getQuadFormsFromDiscr(-12), '\n')
     print('D = -15:', getQuadFormsCount(-15))
