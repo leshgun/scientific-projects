@@ -1,5 +1,5 @@
-# G(x,y) -> a(x) - b(x)*y
-# returns (a, b)
+# G(x,y) = y^k + ... -> a(x) - b(x)*y
+# returns a(x) - b(x)*y
 def getGoodPolFunc(C, G):
     _.<x, y> = PolynomialRing(C.base_ring())
     f, h = C.hyperelliptic_polynomials()
@@ -43,9 +43,10 @@ def genPolFunc(C, dx=0):
 
 
 # alternative method
-# returns (a,b) where G(x,y) = a(x) - b(x)*y - polynomial function
+# returns G(x,y) = a(x) - b(x)*y - polynomial function
 def getPolFunc2(C):
-    f, h = C.hyperelliptic_polynomials()
+#     f, h = C.hyperelliptic_polynomials()
+#     A2.curve([y^2 + h*y - f])
     A2.<x,y> = AffineSpace(2, C.base_ring())
     A2C = A2.coordinate_ring()
     g = A2C.random_element()
@@ -76,7 +77,7 @@ def getPolFuncDegree(C, G):
     _.<x, y> = PolynomialRing(C.base_ring())
     a, b = G
     da = a.degree() if a else 0
-    db = b.degree() if a else 0
+    db = b.degree() if b else 0
     return max([2*da, 2*C.genus() + 1 + 2*db])
 
 
@@ -126,9 +127,9 @@ def getRatFuncZerosAndPoles(C, R):
 
 if __name__ == '__main__':
     p = 7
-    f = (1, 1, 5, 0, 6, 1, 3)		# = x^6 + x^5 + 5x^4 + 6x^2 + x + 3
+    f = (1, 5, 0, 6, 1, 3)		# = x^6 + x^5 + 5x^4 + 6x^2 + x + 3
     h = (1, 0, 1)					# not required
-    C = getHyperCurve(p, f, h)
+    C = getHyperCurve(p, f)
     print('C:', C)
     G = genPolFunc(C)
     H = genPolFunc(C)
@@ -151,3 +152,5 @@ if __name__ == '__main__':
     print('Does R[x, y] look like a polynomial function:', "y" not in (str(Ra)+str(Rb)))
     print('--- zeros:', zeros)
     print('--- poles:', poles)
+#     print()
+#     print("G'(x, y):", getPolFunc2(C))
