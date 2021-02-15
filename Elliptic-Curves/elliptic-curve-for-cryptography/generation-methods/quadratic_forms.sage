@@ -11,9 +11,8 @@ def getQuadFormsCount(D):
 #             print('--- (a, b):', (a, b))
 #             print('--- q:', q, a%q)
             if not q%a:
-                c = q/a
-                if gcd([a, b, c]) == 1:
-                    if (b == a) or (c == a) or (not b): h += 1
+                if gcd([a, b, q/a]) == 1:
+                    if (b == a) or (a**2 == q) or (not b): h += 1
                     else: h += 2
             a += 1
         b += 2
