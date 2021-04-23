@@ -1,4 +1,4 @@
-def Ñornacchia(p: int, D: int):
+def Cornacchia(p: int, D: int):
     
     """ Modified Cornacchia
     
@@ -58,6 +58,6 @@ if __name__=='__main__':
     p = 37; print('P:', p)
     for D in range(4*p):
         if D%4 in [1, 2]: continue
-        res = Ñornacchia(p, -D)
+        res = Cornacchia(p, -D)
 #         print(f'-- ({-D}):', res)
         if not isinstance(res, str): print(f'-- ({-D}):', res)

@@ -27,7 +27,7 @@ def cm_method(p, N, D=0):
         while D < 4*p:
             D += 1
             if D%4 in [1, 2]: continue
-            res = Ñornacchia(p, -D)
+            res = Cornacchia(p, -D)
             if not isinstance(res, str): break
         D = -D
     hd = hilbert_basic(D, p)

@@ -34,7 +34,7 @@ def getQuadFormsCount(D):
     return h
 
 
-def Ñornacchia(p: int, D: int):
+def Cornacchia(p: int, D: int):
     
     """ Modified Cornacchia
     
@@ -147,7 +147,7 @@ def hilbert_crt(D, p):
     T = {}
     while M <= B:
         q = next_prime(q)
-        c = Ñornacchia(q, D)
+        c = Cornacchia(q, D)
         if (not isinstance(c, str)) and (int(c[1]) == 1): 
             T[q] = c[0]
             S += [q]
