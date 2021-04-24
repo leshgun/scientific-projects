@@ -53,7 +53,7 @@ int main(void)
     //if(!fopen_s(&source, "source.txt", "r+b" ))
     if (fopen_s(&source, "song.txt", "rb"))
         HandleError("Problem opening the file 'source.txt'\n");
-    printf("--- The file 'source.txt' was opened\n");
+    printf("--- The file 'song.txt' was opened\n");
 
     // Открытие файла, в который будет производится запись зашифрованного файла.
     if (fopen_s(&Encrypt, "encrypt.bin", "wb"))
@@ -63,7 +63,7 @@ int main(void)
     // Открытие файла, в который будет производится запись хэша ключа.
     if (fopen_s(&pass, "pass.bin", "wb"))
         HandleError("Problem opening the file 'pass.bin'\n");
-    printf("--- The file 'encrypt.bin' was opened\n");
+    printf("--- The file 'pass.bin' was opened\n");
 
     // Открытие файла, в который производится запись вектора инициализации.
     //if (fopen_s(&vectorf, "vector.bin", "wb"))
