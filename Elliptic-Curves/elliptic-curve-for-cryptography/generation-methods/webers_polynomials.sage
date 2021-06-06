@@ -145,7 +145,7 @@ def webers_polynomials(D):
     Computing Weber's polynomial.
 
     Args:
-        - ``D`` (int): The base of the logarithm.
+        - ``D`` (int):  Discriminant of quadratic forms.
         
     Returns:
         polynomial: W(x) over ZZ
